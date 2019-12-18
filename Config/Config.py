@@ -11,7 +11,6 @@ test_report_dir = r'C:\\Users\\user\\PycharmProjects\\Interface_Test_Project\\Re
 
 
 
-
 # 发送邮箱服务器
 smtpserver = 'smtp.qq.com'
 # 发送邮箱用户名/密码
