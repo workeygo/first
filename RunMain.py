@@ -10,7 +10,7 @@ import unittest
 from Utils.Get_File import Get_File
 from Utils.Send_Email import Send_Email
 from Utils.BeautifulReport.BeautifulReport import BeautifulReport
-
+from Utils.HTMLTestRunner import HTMLTestRunner
 
 
 
@@ -36,3 +36,5 @@ if __name__ == '__main__':
     Send_Email().send_email(new_report)
     print('=====AutoTest Over======')
 
+    #docker logs -f test2_netway_web
+    #docker ps

@@ -14,11 +14,16 @@ test_report_dir = r'C:\\Users\\user\\PycharmProjects\\Interface_Test_Project\\Re
 # 发送邮箱服务器
 smtpserver = 'smtp.qq.com'
 # 发送邮箱用户名/密码
-user = '280932267@qq.com'
-password = 'hhhjymzyvbmsbijb'
+user = '498413828@qq.com'
+# password = 'hhhjymzyvbmsbijb'
+password = 'sehynbylfdndbicf'
 # 发送邮箱
-sender = '280932267@qq.com'
+sender = '498413828@qq.com'
 # 多个接收邮箱，单个收件人的话，直接是receiver='xxx@xxx.com'
 receiver = ['wanbaolin@testbird.com', '24273714@qq.com']
 # 发送邮件主题
 subject = '自动定时发送测试报告'+SendEmailTime
+# 发件人地址
+fromsender = '发件人兴证国际 <498413828@qq.com>'
+# 编码格式
+code ='utf-8'

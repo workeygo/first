@@ -14,6 +14,7 @@ class Send_Email():
 
         # 发送邮箱服务器
         smtpserver = Config.smtpserver
+        # smtpserver = 'smtp.exmail.qq.com'
         # 发送邮箱用户名/密码
         user = Config.user
         password = Config.password
@@ -23,6 +24,10 @@ class Send_Email():
         receiver = Config.receiver
         # 发送邮件主题
         subject = Config.subject
+        #编码格式
+        code = Config.code
+        #发件人地址
+        fromsender = Config.fromsender
 
         # 编写 HTML类型的邮件正文
         # MIMEText这个效果和下方用MIMEMultipart效果是一致的，已通过。
@@ -52,14 +57,15 @@ class Send_Email():
 
         # 要加上msg['From']这句话，否则会报554的错误。
         # 要在163有限设置授权码（即客户端的密码），否则会报535
-        msg['Subject'] = Header(subject, 'utf-8')
-        msg['From'] = Header('发件人兴证国际 <280932267@qq.com>','utf-8')
+        msg['Subject'] = Header(subject, code)
+        msg['From'] = Header(fromsender,code)
         msg['To'] = ";".join(receiver)
 
 
         # 连接发送邮件
         smtp = smtplib.SMTP()
         try:
+        # smtp = smtplib.SMTP_SSL(smtpserver,465)
             smtp.connect(smtpserver, 25)
             smtp.login(user, password)
             smtp.sendmail(sender, receiver, msg.as_string())
